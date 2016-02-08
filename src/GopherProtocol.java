@@ -56,9 +56,9 @@ public class GopherProtocol {
 
         for (Item e : itens) {
             if (e.getType() == 0) {
-                builder.append(e.getItemName() + "\n");
+                builder.append(e.getItemName() + "\r\n");
             } else {
-                builder.append(e.getItemName() + "...\n");
+                builder.append(e.getItemName() + "...\r\n");
             }
         }
         return builder.toString();
@@ -95,7 +95,7 @@ public class GopherProtocol {
                             BufferedReader bf = new BufferedReader(fr);
 
                             while ((line = bf.readLine()) != null) {
-                                builder.append(line + "\n");
+                                builder.append(line + "\r\n");
                             }
                             return builder.toString();
 
