@@ -1,0 +1,20 @@
+default: compile
+compile: ConfigReader.class Connection.class GopherProtocol.class GopherProtocolCaretaker.class GopherProtocolMemento.class GopherServer.class Item.class Main.class
+ConfigReader.class: ConfigReader.java
+	javac -d . -classpath . ConfigReader.java
+Connection.class: Connection.java
+	javac -d . -classpath . Connection.java
+GopherProtocol.class: GopherProtocol.java
+	javac -d . -classpath . GopherProtocol.java
+GopherProtocolCaretaker.class: GopherProtocolCaretaker.java
+	javac -d . -classpath . GopherProtocolCaretaker.java
+GopherProtocolMemento.class: GopherProtocolMemento.java
+	javac -d . -classpath . GopherProtocolMemento.java
+GopherServer.class: GopherServer.java
+	javac -d . -classpath . GopherServer.java
+Item.class: Item.java
+	javac -d . -classpath . Item.java
+Main.class: Main.java
+	javac -d . -classpath . Main.java
+clean:
+	rm -f *.class 
